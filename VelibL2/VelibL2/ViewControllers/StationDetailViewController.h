@@ -10,4 +10,5 @@
 
 @interface StationDetailViewController : UIViewController
 
+@property (nonatomic, strong) NSString *stationName;
 @end
