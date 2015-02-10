@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C774F0A1A8A1CFD0013D575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C774F091A8A1CFD0013D575 /* main.m */; };
+		9C774F0D1A8A1CFD0013D575 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C774F0C1A8A1CFD0013D575 /* AppDelegate.m */; };
+		9C774F131A8A1CFD0013D575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C774F111A8A1CFD0013D575 /* Main.storyboard */; };
+		9C774F151A8A1CFD0013D575 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C774F141A8A1CFD0013D575 /* Images.xcassets */; };
+		9C774F181A8A1CFD0013D575 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C774F161A8A1CFD0013D575 /* LaunchScreen.xib */; };
+		9C774F241A8A1CFD0013D575 /* VelibL2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C774F231A8A1CFD0013D575 /* VelibL2Tests.m */; };
+		9C774F451A8A22770013D575 /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C774F3C1A8A22770013D575 /* InfosViewController.m */; };
+		9C774F461A8A22770013D575 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C774F3E1A8A22770013D575 /* MapViewController.m */; };
+		9C774F471A8A22770013D575 /* ModaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C774F401A8A22770013D575 /* ModaleViewController.m */; };
+		9C774F481A8A22770013D575 /* StationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C774F421A8A22770013D575 /* StationDetailViewController.m */; };
+		9C774F491A8A22770013D575 /* StationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C774F441A8A22770013D575 /* StationsListViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C774F1E1A8A1CFD0013D575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C774EFC1A8A1CFD0013D575 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C774F031A8A1CFD0013D575;
+			remoteInfo = VelibL2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C774F041A8A1CFD0013D575 /* VelibL2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VelibL2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C774F081A8A1CFD0013D575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C774F091A8A1CFD0013D575 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C774F0B1A8A1CFD0013D575 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C774F0C1A8A1CFD0013D575 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C774F121A8A1CFD0013D575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C774F141A8A1CFD0013D575 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C774F171A8A1CFD0013D575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9C774F1D1A8A1CFD0013D575 /* VelibL2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VelibL2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C774F221A8A1CFD0013D575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C774F231A8A1CFD0013D575 /* VelibL2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VelibL2Tests.m; sourceTree = "<group>"; };
+		9C774F3B1A8A22770013D575 /* InfosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfosViewController.h; sourceTree = "<group>"; };
+		9C774F3C1A8A22770013D575 /* InfosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfosViewController.m; sourceTree = "<group>"; };
+		9C774F3D1A8A22770013D575 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		9C774F3E1A8A22770013D575 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		9C774F3F1A8A22770013D575 /* ModaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModaleViewController.h; sourceTree = "<group>"; };
+		9C774F401A8A22770013D575 /* ModaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModaleViewController.m; sourceTree = "<group>"; };
+		9C774F411A8A22770013D575 /* StationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationDetailViewController.h; sourceTree = "<group>"; };
+		9C774F421A8A22770013D575 /* StationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationDetailViewController.m; sourceTree = "<group>"; };
+		9C774F431A8A22770013D575 /* StationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsListViewController.h; sourceTree = "<group>"; };
+		9C774F441A8A22770013D575 /* StationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsListViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C774F011A8A1CFD0013D575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C774F1A1A8A1CFD0013D575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C774EFB1A8A1CFD0013D575 = {
+			isa = PBXGroup;
+			children = (
+				9C774F061A8A1CFD0013D575 /* VelibL2 */,
+				9C774F201A8A1CFD0013D575 /* VelibL2Tests */,
+				9C774F051A8A1CFD0013D575 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C774F051A8A1CFD0013D575 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C774F041A8A1CFD0013D575 /* VelibL2.app */,
+				9C774F1D1A8A1CFD0013D575 /* VelibL2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C774F061A8A1CFD0013D575 /* VelibL2 */ = {
+			isa = PBXGroup;
+			children = (
+				9C774F3A1A8A22770013D575 /* ViewControllers */,
+				9C774F0B1A8A1CFD0013D575 /* AppDelegate.h */,
+				9C774F0C1A8A1CFD0013D575 /* AppDelegate.m */,
+				9C774F111A8A1CFD0013D575 /* Main.storyboard */,
+				9C774F141A8A1CFD0013D575 /* Images.xcassets */,
+				9C774F161A8A1CFD0013D575 /* LaunchScreen.xib */,
+				9C774F071A8A1CFD0013D575 /* Supporting Files */,
+			);
+			path = VelibL2;
+			sourceTree = "<group>";
+		};
+		9C774F071A8A1CFD0013D575 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C774F081A8A1CFD0013D575 /* Info.plist */,
+				9C774F091A8A1CFD0013D575 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C774F201A8A1CFD0013D575 /* VelibL2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9C774F231A8A1CFD0013D575 /* VelibL2Tests.m */,
+				9C774F211A8A1CFD0013D575 /* Supporting Files */,
+			);
+			path = VelibL2Tests;
+			sourceTree = "<group>";
+		};
+		9C774F211A8A1CFD0013D575 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C774F221A8A1CFD0013D575 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C774F3A1A8A22770013D575 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C774F3F1A8A22770013D575 /* ModaleViewController.h */,
+				9C774F401A8A22770013D575 /* ModaleViewController.m */,
+				9C774F3B1A8A22770013D575 /* InfosViewController.h */,
+				9C774F3C1A8A22770013D575 /* InfosViewController.m */,
+				9C774F3D1A8A22770013D575 /* MapViewController.h */,
+				9C774F3E1A8A22770013D575 /* MapViewController.m */,
+				9C774F411A8A22770013D575 /* StationDetailViewController.h */,
+				9C774F421A8A22770013D575 /* StationDetailViewController.m */,
+				9C774F431A8A22770013D575 /* StationsListViewController.h */,
+				9C774F441A8A22770013D575 /* StationsListViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C774F031A8A1CFD0013D575 /* VelibL2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C774F271A8A1CFD0013D575 /* Build configuration list for PBXNativeTarget "VelibL2" */;
+			buildPhases = (
+				9C774F001A8A1CFD0013D575 /* Sources */,
+				9C774F011A8A1CFD0013D575 /* Frameworks */,
+				9C774F021A8A1CFD0013D575 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VelibL2;
+			productName = VelibL2;
+			productReference = 9C774F041A8A1CFD0013D575 /* VelibL2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C774F1C1A8A1CFD0013D575 /* VelibL2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C774F2A1A8A1CFD0013D575 /* Build configuration list for PBXNativeTarget "VelibL2Tests" */;
+			buildPhases = (
+				9C774F191A8A1CFD0013D575 /* Sources */,
+				9C774F1A1A8A1CFD0013D575 /* Frameworks */,
+				9C774F1B1A8A1CFD0013D575 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C774F1F1A8A1CFD0013D575 /* PBXTargetDependency */,
+			);
+			name = VelibL2Tests;
+			productName = VelibL2Tests;
+			productReference = 9C774F1D1A8A1CFD0013D575 /* VelibL2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C774EFC1A8A1CFD0013D575 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Iman Zarrabian";
+				TargetAttributes = {
+					9C774F031A8A1CFD0013D575 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					9C774F1C1A8A1CFD0013D575 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 9C774F031A8A1CFD0013D575;
+					};
+				};
+			};
+			buildConfigurationList = 9C774EFF1A8A1CFD0013D575 /* Build configuration list for PBXProject "VelibL2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C774EFB1A8A1CFD0013D575;
+			productRefGroup = 9C774F051A8A1CFD0013D575 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C774F031A8A1CFD0013D575 /* VelibL2 */,
+				9C774F1C1A8A1CFD0013D575 /* VelibL2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C774F021A8A1CFD0013D575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C774F131A8A1CFD0013D575 /* Main.storyboard in Resources */,
+				9C774F181A8A1CFD0013D575 /* LaunchScreen.xib in Resources */,
+				9C774F151A8A1CFD0013D575 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C774F1B1A8A1CFD0013D575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C774F001A8A1CFD0013D575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C774F491A8A22770013D575 /* StationsListViewController.m in Sources */,
+				9C774F481A8A22770013D575 /* StationDetailViewController.m in Sources */,
+				9C774F451A8A22770013D575 /* InfosViewController.m in Sources */,
+				9C774F0D1A8A1CFD0013D575 /* AppDelegate.m in Sources */,
+				9C774F0A1A8A1CFD0013D575 /* main.m in Sources */,
+				9C774F461A8A22770013D575 /* MapViewController.m in Sources */,
+				9C774F471A8A22770013D575 /* ModaleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C774F191A8A1CFD0013D575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C774F241A8A1CFD0013D575 /* VelibL2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C774F1F1A8A1CFD0013D575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C774F031A8A1CFD0013D575 /* VelibL2 */;
+			targetProxy = 9C774F1E1A8A1CFD0013D575 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C774F111A8A1CFD0013D575 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C774F121A8A1CFD0013D575 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C774F161A8A1CFD0013D575 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C774F171A8A1CFD0013D575 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C774F251A8A1CFD0013D575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9C774F261A8A1CFD0013D575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C774F281A8A1CFD0013D575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VelibL2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9C774F291A8A1CFD0013D575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VelibL2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9C774F2B1A8A1CFD0013D575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VelibL2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VelibL2.app/VelibL2";
+			};
+			name = Debug;
+		};
+		9C774F2C1A8A1CFD0013D575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VelibL2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VelibL2.app/VelibL2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C774EFF1A8A1CFD0013D575 /* Build configuration list for PBXProject "VelibL2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C774F251A8A1CFD0013D575 /* Debug */,
+				9C774F261A8A1CFD0013D575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C774F271A8A1CFD0013D575 /* Build configuration list for PBXNativeTarget "VelibL2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C774F281A8A1CFD0013D575 /* Debug */,
+				9C774F291A8A1CFD0013D575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9C774F2A1A8A1CFD0013D575 /* Build configuration list for PBXNativeTarget "VelibL2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C774F2B1A8A1CFD0013D575 /* Debug */,
+				9C774F2C1A8A1CFD0013D575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C774EFC1A8A1CFD0013D575 /* Project object */;
+}
