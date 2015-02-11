@@ -57,20 +57,53 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="BXc-VK-eX1" rowHeight="186" style="IBUITableViewCellStyleDefault" id="lz1-GV-WTv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="186" id="lz1-GV-WTv" customClass="StationTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lz1-GV-WTv" id="MBz-om-o90">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BXc-VK-eX1">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqg-Ma-otS">
+                                                    <rect key="frame" x="70" y="32" width="120" height="25"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 vélos disponibles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dh-3j-PsQ">
+                                                    <rect key="frame" x="70" y="112" width="131" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 emplacements disponibles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65H-Zs-3sI">
+                                                    <rect key="frame" x="70" y="132" width="193" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike" translatesAutoresizingMaskIntoConstraints="NO" id="wlG-00-CLp">
+                                                    <rect key="frame" x="8" y="66" width="54" height="54"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="54" id="a6E-AJ-frR"/>
+                                                        <constraint firstAttribute="width" constant="54" id="j2C-eH-rLl"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="65H-Zs-3sI" firstAttribute="top" secondItem="9Dh-3j-PsQ" secondAttribute="bottom" constant="2" id="2V2-cC-epZ"/>
+                                                <constraint firstItem="9Dh-3j-PsQ" firstAttribute="leading" secondItem="MBz-om-o90" secondAttribute="leading" constant="70" id="2zc-g9-Gjl"/>
+                                                <constraint firstItem="wlG-00-CLp" firstAttribute="leading" secondItem="MBz-om-o90" secondAttribute="leading" constant="8" id="97I-fV-IvV"/>
+                                                <constraint firstItem="Yqg-Ma-otS" firstAttribute="top" secondItem="MBz-om-o90" secondAttribute="top" constant="32" id="Fps-Tk-baa"/>
+                                                <constraint firstItem="65H-Zs-3sI" firstAttribute="leading" secondItem="MBz-om-o90" secondAttribute="leading" constant="70" id="KcJ-Le-fw3"/>
+                                                <constraint firstItem="9Dh-3j-PsQ" firstAttribute="top" secondItem="Yqg-Ma-otS" secondAttribute="bottom" constant="55" id="Shr-se-c8P"/>
+                                                <constraint firstItem="wlG-00-CLp" firstAttribute="top" secondItem="MBz-om-o90" secondAttribute="top" constant="66" id="Vae-Wc-PDR"/>
+                                                <constraint firstItem="Yqg-Ma-otS" firstAttribute="leading" secondItem="MBz-om-o90" secondAttribute="leading" constant="70" id="dYt-mw-W4f"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="avatarIV" destination="wlG-00-CLp" id="KkW-K6-ckr"/>
+                                            <outlet property="stationNameLabel" destination="Yqg-Ma-otS" id="Bfw-kM-SHw"/>
+                                            <outlet property="stationNbBikesAvailableLabel" destination="9Dh-3j-PsQ" id="r79-cg-UzB"/>
+                                            <outlet property="stationNbStandsAvailableLabel" destination="65H-Zs-3sI" id="vvZ-iv-vSn"/>
                                             <segue destination="hY6-Xe-Q5c" kind="show" identifier="detailSegue" id="m4c-Qc-Whb"/>
                                         </connections>
                                     </tableViewCell>
@@ -107,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="271"/>
+            <point key="canvasLocation" x="1016" y="266"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="yLX-32-hRZ">
@@ -157,8 +190,63 @@
                     <view key="view" contentMode="scaleToFill" id="fic-sb-rha">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 vélos dispos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVF-6t-lkl">
+                                <rect key="frame" x="16" y="143" width="568" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 stands dispos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-HQ-fbA">
+                                <rect key="frame" x="16" y="177" width="568" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pN-ZK-iqg">
+                                <rect key="frame" x="16" y="95" width="568" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-u8-276">
+                                <rect key="frame" x="16" y="236" width="568" height="344"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJR-J2-BFN">
+                                <rect key="frame" x="492" y="198" width="92" height="30"/>
+                                <state key="normal" title="Reset Region">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetRegion:" destination="hY6-Xe-Q5c" eventType="touchUpInside" id="ezV-4G-7NZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.89496453014391542" blue="0.21418547840594715" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xCo-u8-276" firstAttribute="top" secondItem="xJR-J2-BFN" secondAttribute="bottom" constant="8" id="1G5-Co-bBU"/>
+                            <constraint firstItem="9pN-ZK-iqg" firstAttribute="top" secondItem="EZs-r5-p9H" secondAttribute="bottom" constant="31" id="6qo-pz-Dni"/>
+                            <constraint firstItem="CvU-HQ-fbA" firstAttribute="top" secondItem="sVF-6t-lkl" secondAttribute="bottom" constant="13" id="BaL-Mj-g81"/>
+                            <constraint firstAttribute="trailing" secondItem="xJR-J2-BFN" secondAttribute="trailing" constant="16" id="DJR-dS-8Zy"/>
+                            <constraint firstItem="CvU-HQ-fbA" firstAttribute="leading" secondItem="fic-sb-rha" secondAttribute="leading" constant="16" id="FAS-yx-jiW"/>
+                            <constraint firstItem="xCo-u8-276" firstAttribute="leading" secondItem="fic-sb-rha" secondAttribute="leading" constant="16" id="Hma-nz-oqY"/>
+                            <constraint firstAttribute="trailing" secondItem="xCo-u8-276" secondAttribute="trailing" constant="16" id="I3J-2f-zkH"/>
+                            <constraint firstItem="sVF-6t-lkl" firstAttribute="top" secondItem="9pN-ZK-iqg" secondAttribute="bottom" constant="27" id="OWd-Pc-Mj1"/>
+                            <constraint firstAttribute="trailing" secondItem="9pN-ZK-iqg" secondAttribute="trailing" constant="16" id="UGT-FT-fOH"/>
+                            <constraint firstItem="yrq-ro-pRJ" firstAttribute="top" secondItem="xCo-u8-276" secondAttribute="bottom" constant="20" id="W42-4x-Kuf"/>
+                            <constraint firstItem="xCo-u8-276" firstAttribute="top" secondItem="CvU-HQ-fbA" secondAttribute="bottom" constant="38" id="ZB1-E9-Utd"/>
+                            <constraint firstAttribute="trailing" secondItem="sVF-6t-lkl" secondAttribute="trailing" constant="16" id="Zhj-aw-wjX"/>
+                            <constraint firstAttribute="trailing" secondItem="CvU-HQ-fbA" secondAttribute="trailing" constant="16" id="a2i-R4-52L"/>
+                            <constraint firstItem="sVF-6t-lkl" firstAttribute="leading" secondItem="fic-sb-rha" secondAttribute="leading" constant="16" id="hKM-pP-cml"/>
+                            <constraint firstItem="9pN-ZK-iqg" firstAttribute="leading" secondItem="fic-sb-rha" secondAttribute="leading" constant="16" id="mrL-qb-L5S"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adresseLabel" destination="9pN-ZK-iqg" id="x9j-9h-fcP"/>
+                        <outlet property="mapView" destination="xCo-u8-276" id="HvR-Zy-hWg"/>
+                        <outlet property="nbBikesLabel" destination="sVF-6t-lkl" id="JAj-F9-Luf"/>
+                        <outlet property="nbStandsLabel" destination="CvU-HQ-fbA" id="2M3-1f-fqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iC8-1c-Fuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,4 +271,7 @@
             <point key="canvasLocation" x="341" y="271"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bike" width="450" height="450"/>
+    </resources>
 </document>

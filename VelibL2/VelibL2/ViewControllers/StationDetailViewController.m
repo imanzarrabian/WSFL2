@@ -7,21 +7,56 @@
 //
 
 #import "StationDetailViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface StationDetailViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *adresseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nbBikesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nbStandsLabel;
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @end
 
 @implementation StationDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.stationName;
+    self.title = self.station.stationName;
+    self.adresseLabel.text = self.station.stationAdresse;
+    
+    self.nbBikesLabel.text = [NSString stringWithFormat:@"%ld vélos dispos",self.station.stationAvailableBikesNumber];
+
+    self.nbStandsLabel.text = [NSString stringWithFormat:@"%ld vélos dispos",self.station.stationAvailableStandsNumber];
+    
+    [self addAnnotationOnMap];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self setCorrectRegionOnMap];
+}
+
+- (void)addAnnotationOnMap {
+    [self setCorrectRegionOnMap];
+    //Ajouter une epingle
+    [self.mapView addAnnotation:self.station];
+}
+
+- (void)setCorrectRegionOnMap {
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(self.station.lat, self.station.lng);
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.001, 0.001);
+    
+    MKCoordinateRegion newRegion = MKCoordinateRegionMake(center, span);
+    
+    //Region
+    [self.mapView setRegion:newRegion animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)resetRegion:(id)sender {
+    [self setCorrectRegionOnMap];
 }
 
 /*

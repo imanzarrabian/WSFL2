@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Station.h"
 @interface StationDetailViewController : UIViewController
 
-@property (nonatomic, strong) NSString *stationName;
+@property (nonatomic, strong) Station *station;
 @end

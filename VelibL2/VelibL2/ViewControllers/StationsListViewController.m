@@ -8,6 +8,9 @@
 
 #import "StationsListViewController.h"
 #import "StationDetailViewController.h"
+#import "StationTableViewCell.h"
+#import "Station.h"
+#import "UIImageView+WebCache.h"
 
 @interface StationsListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *stationsArray;
@@ -26,7 +29,25 @@
 
 - (void)fillArrayWithData {
     for (NSInteger i=0; i<1001; i++) {
-        self.stationsArray[i] = [NSString stringWithFormat:@"Station %ld",i];
+
+        
+        
+        
+        Station *station = [[Station alloc] init];
+        station.stationName = [NSString stringWithFormat:@"Station %ld",i];
+        station.stationAdresse = [NSString stringWithFormat:@"Station Adresse Un peu plus longue que le nom %ld",i];
+
+        station.stationAvailableBikesNumber = i;
+        station.stationAvailableStandsNumber = i*3+2;
+        
+        station.lat = 48.8254416 + i*0.001;
+        station.lng = 2.3665593 + i*0.001;
+        
+        station.coordinate = CLLocationCoordinate2DMake(station.lat, station.lng);
+        station.title = station.stationName;
+        station.subtitle = station.stationAdresse;
+        
+        self.stationsArray[i] = station;
     }
 }
 
@@ -42,8 +63,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    //Retourne une cellule avec les bonnes infos dedans
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = self.stationsArray[indexPath.row];
+    StationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    Station *currentStation = self.stationsArray[indexPath.row];
+    
+    cell.stationNameLabel.text = currentStation.stationName;
+    
+    cell.stationNbBikesAvailableLabel.text = [NSString stringWithFormat:@"%ld vélos dispos",currentStation.stationAvailableBikesNumber];
+    
+    cell.stationNbStandsAvailableLabel.text = [NSString stringWithFormat:@"%ld emplacements dispos",currentStation.stationAvailableStandsNumber];
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.yankodesign.com/images/design_news/2013/10/17/flexi_bike.jpg"];
+   
+    [cell.avatarIV sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"bike"]];
+    
     return cell;
 }
 
@@ -59,12 +92,14 @@
     //a savoir liste vers detail
     if ([segue.identifier isEqualToString:@"detailSegue"]) {
         
-        //Cast vers UITableViewCell
+        //Cast vers UITableViewCell et StationDetailViewController
         UITableViewCell *currentCell = (UITableViewCell *)sender;
         StationDetailViewController *detailVC = (StationDetailViewController *)segue.destinationViewController;
 
         NSIndexPath *indexPath = [self.tableView indexPathForCell:currentCell];
-        detailVC.stationName = self.stationsArray[indexPath.row];
+        
+        detailVC.station = self.stationsArray[indexPath.row];
+       
     }
 }
 
